@@ -1,0 +1,367 @@
+{
+  "question_templates": {
+    "medications": {
+      "description": "Questions about prescribed medications",
+      "templates": [
+        {
+          "id": "med_why_prescribed",
+          "template": "Why was I prescribed {medication_name}?",
+          "required_fields": ["medication_name"],
+          "optional_fields": [],
+          "context": "General question about medication purpose"
+        },
+        {
+          "id": "med_side_effects",
+          "template": "What are the side effects of {medication_name} I should watch for?",
+          "required_fields": ["medication_name"],
+          "optional_fields": [],
+          "context": "Safety and monitoring information"
+        },
+        {
+          "id": "med_how_to_take",
+          "template": "How should I take {medication_name} ({dose_val} {dose_unit} via {route})?",
+          "required_fields": ["medication_name", "dose_val", "dose_unit", "route"],
+          "optional_fields": ["form"],
+          "context": "Administration instructions"
+        },
+        {
+          "id": "med_can_stop",
+          "template": "Can I stop taking {medication_name} if I feel better?",
+          "required_fields": ["medication_name"],
+          "optional_fields": [],
+          "context": "Compliance and safety"
+        },
+        {
+          "id": "med_interactions",
+          "template": "Are there any interactions between {medication_1} and {medication_2}?",
+          "required_fields": ["medication_1", "medication_2"],
+          "optional_fields": [],
+          "context": "Drug-drug interactions for patients on multiple medications"
+        },
+        {
+          "id": "med_dose_change",
+          "template": "Why might my {medication_name} dose be {dose_val} {dose_unit} instead of a different amount?",
+          "required_fields": ["medication_name", "dose_val", "dose_unit"],
+          "optional_fields": [],
+          "context": "Understanding dosing rationale"
+        },
+        {
+          "id": "med_duration",
+          "template": "How long will I need to take {medication_name}?",
+          "required_fields": ["medication_name"],
+          "optional_fields": [],
+          "context": "Treatment duration expectations"
+        },
+        {
+          "id": "med_food_interactions",
+          "template": "Should I take {medication_name} with or without food?",
+          "required_fields": ["medication_name"],
+          "optional_fields": [],
+          "context": "Dietary considerations"
+        }
+      ]
+    },
+    "diagnoses": {
+      "description": "Questions about patient diagnoses",
+      "templates": [
+        {
+          "id": "dx_what_is",
+          "template": "What is {diagnosis_name}?",
+          "required_fields": ["diagnosis_name"],
+          "optional_fields": [],
+          "context": "Understanding the condition"
+        },
+        {
+          "id": "dx_treatment",
+          "template": "How is {diagnosis_name} typically treated?",
+          "required_fields": ["diagnosis_name"],
+          "optional_fields": [],
+          "context": "Treatment options and expectations"
+        },
+        {
+          "id": "dx_prognosis",
+          "template": "What is the prognosis for {diagnosis_name}?",
+          "required_fields": ["diagnosis_name"],
+          "optional_fields": [],
+          "context": "Long-term outlook"
+        },
+        {
+          "id": "dx_causes",
+          "template": "What causes {diagnosis_name}?",
+          "required_fields": ["diagnosis_name"],
+          "optional_fields": [],
+          "context": "Understanding disease etiology"
+        },
+        {
+          "id": "dx_symptoms_watch",
+          "template": "What symptoms of {diagnosis_name} should I watch for at home?",
+          "required_fields": ["diagnosis_name"],
+          "optional_fields": [],
+          "context": "Home monitoring and warning signs"
+        },
+        {
+          "id": "dx_lifestyle",
+          "template": "What lifestyle changes should I make for {diagnosis_name}?",
+          "required_fields": ["diagnosis_name"],
+          "optional_fields": [],
+          "context": "Non-pharmacological management"
+        },
+        {
+          "id": "dx_complications",
+          "template": "What are potential complications of {diagnosis_name}?",
+          "required_fields": ["diagnosis_name"],
+          "optional_fields": [],
+          "context": "Risk awareness"
+        },
+        {
+          "id": "dx_multiple_relationship",
+          "template": "How are my {diagnosis_1} and {diagnosis_2} related?",
+          "required_fields": ["diagnosis_1", "diagnosis_2"],
+          "optional_fields": [],
+          "context": "Understanding comorbidities"
+        }
+      ]
+    },
+    "procedures": {
+      "description": "Questions about medical procedures",
+      "templates": [
+        {
+          "id": "proc_why_needed",
+          "template": "Why did I need {procedure_name}?",
+          "required_fields": ["procedure_name"],
+          "optional_fields": [],
+          "context": "Understanding procedure indication"
+        },
+        {
+          "id": "proc_what_involves",
+          "template": "What does {procedure_name} involve?",
+          "required_fields": ["procedure_name"],
+          "optional_fields": [],
+          "context": "Procedure details"
+        },
+        {
+          "id": "proc_recovery",
+          "template": "How long does recovery from {procedure_name} typically take?",
+          "required_fields": ["procedure_name"],
+          "optional_fields": [],
+          "context": "Recovery expectations"
+        },
+        {
+          "id": "proc_risks",
+          "template": "What are the risks or complications of {procedure_name}?",
+          "required_fields": ["procedure_name"],
+          "optional_fields": [],
+          "context": "Risk awareness"
+        },
+        {
+          "id": "proc_aftercare",
+          "template": "What should I do to care for myself after {procedure_name}?",
+          "required_fields": ["procedure_name"],
+          "optional_fields": [],
+          "context": "Post-procedure care instructions"
+        },
+        {
+          "id": "proc_warning_signs",
+          "template": "What warning signs should I watch for after {procedure_name}?",
+          "required_fields": ["procedure_name"],
+          "optional_fields": [],
+          "context": "Post-procedure monitoring"
+        },
+        {
+          "id": "proc_alternatives",
+          "template": "Were there alternatives to {procedure_name}?",
+          "required_fields": ["procedure_name"],
+          "optional_fields": [],
+          "context": "Understanding treatment options"
+        }
+      ]
+    },
+    "lab_results": {
+      "description": "Questions about laboratory test results",
+      "templates": [
+        {
+          "id": "lab_abnormal_why",
+          "template": "Why is my {lab_name} {abnormal_flag}? My value is {value} {unit}.",
+          "required_fields": ["lab_name", "abnormal_flag", "value", "unit"],
+          "optional_fields": ["ref_range_lower", "ref_range_upper"],
+          "context": "Understanding abnormal results"
+        },
+        {
+          "id": "lab_meaning",
+          "template": "What does a {lab_name} of {value} {unit} mean?",
+          "required_fields": ["lab_name", "value", "unit"],
+          "optional_fields": [],
+          "context": "Interpreting lab values"
+        },
+        {
+          "id": "lab_should_worry",
+          "template": "Should I be concerned about my {lab_name} result of {value} {unit}?",
+          "required_fields": ["lab_name", "value", "unit"],
+          "optional_fields": [],
+          "context": "Risk assessment"
+        },
+        {
+          "id": "lab_improve",
+          "template": "What can I do to improve my {lab_name} levels?",
+          "required_fields": ["lab_name"],
+          "optional_fields": [],
+          "context": "Actionable steps for improvement"
+        },
+        {
+          "id": "lab_med_relationship",
+          "template": "Could my {medication_name} be affecting my {lab_name} levels?",
+          "required_fields": ["medication_name", "lab_name"],
+          "optional_fields": ["value", "unit"],
+          "context": "Medication-lab interactions"
+        },
+        {
+          "id": "lab_dx_relationship",
+          "template": "How is my {lab_name} result related to my {diagnosis_name}?",
+          "required_fields": ["lab_name", "diagnosis_name"],
+          "optional_fields": ["value", "unit"],
+          "context": "Understanding disease-lab correlations"
+        },
+        {
+          "id": "lab_retest",
+          "template": "How often should my {lab_name} be rechecked?",
+          "required_fields": ["lab_name"],
+          "optional_fields": [],
+          "context": "Follow-up monitoring"
+        }
+      ]
+    },
+    "discharge_followup": {
+      "description": "Questions about post-discharge care and follow-up",
+      "templates": [
+        {
+          "id": "discharge_when_followup",
+          "template": "When should I follow up with my doctor after being discharged for {primary_diagnosis}?",
+          "required_fields": ["primary_diagnosis"],
+          "optional_fields": [],
+          "context": "Follow-up timing"
+        },
+        {
+          "id": "discharge_warning_signs",
+          "template": "What symptoms should I watch for at home after being treated for {primary_diagnosis}?",
+          "required_fields": ["primary_diagnosis"],
+          "optional_fields": [],
+          "context": "Home monitoring"
+        },
+        {
+          "id": "discharge_activities",
+          "template": "What activities should I avoid after being treated for {primary_diagnosis}?",
+          "required_fields": ["primary_diagnosis"],
+          "optional_fields": [],
+          "context": "Activity restrictions"
+        },
+        {
+          "id": "discharge_return_normal",
+          "template": "When can I return to normal activities after {procedure_name}?",
+          "required_fields": ["procedure_name"],
+          "optional_fields": [],
+          "context": "Recovery timeline"
+        },
+        {
+          "id": "discharge_emergency",
+          "template": "When should I go to the emergency room instead of waiting for my follow-up appointment?",
+          "required_fields": [],
+          "optional_fields": ["primary_diagnosis", "procedure_name"],
+          "context": "Emergency criteria"
+        },
+        {
+          "id": "discharge_diet",
+          "template": "Are there any dietary restrictions I should follow for {diagnosis_name}?",
+          "required_fields": ["diagnosis_name"],
+          "optional_fields": [],
+          "context": "Dietary management"
+        }
+      ]
+    },
+    "icu_specific": {
+      "description": "Questions specific to ICU stays",
+      "templates": [
+        {
+          "id": "icu_why_admitted",
+          "template": "Why was I admitted to the ICU?",
+          "required_fields": [],
+          "optional_fields": ["primary_diagnosis"],
+          "context": "Understanding ICU admission"
+        },
+        {
+          "id": "icu_length_implications",
+          "template": "What does it mean that I was in the ICU for {los_days} days?",
+          "required_fields": ["los_days"],
+          "optional_fields": [],
+          "context": "Understanding severity"
+        },
+        {
+          "id": "icu_recovery_expectations",
+          "template": "What should I expect during recovery after an ICU stay?",
+          "required_fields": [],
+          "optional_fields": [],
+          "context": "Post-ICU syndrome awareness"
+        }
+      ]
+    },
+    "multi_factor": {
+      "description": "Complex questions involving multiple data points",
+      "templates": [
+        {
+          "id": "multi_med_combo_reason",
+          "template": "Why am I taking both {medication_1} and {medication_2} for {diagnosis_name}?",
+          "required_fields": ["medication_1", "medication_2", "diagnosis_name"],
+          "optional_fields": [],
+          "context": "Understanding combination therapy"
+        },
+        {
+          "id": "multi_med_lab_effect",
+          "template": "Is my {medication_name} causing my {lab_name} to be {abnormal_flag}?",
+          "required_fields": ["medication_name", "lab_name", "abnormal_flag"],
+          "optional_fields": [],
+          "context": "Medication side effects on labs"
+        },
+        {
+          "id": "multi_dx_med_match",
+          "template": "How does {medication_name} help treat my {diagnosis_name}?",
+          "required_fields": ["medication_name", "diagnosis_name"],
+          "optional_fields": [],
+          "context": "Understanding treatment rationale"
+        },
+        {
+          "id": "multi_proc_dx_relationship",
+          "template": "How does {procedure_name} help with my {diagnosis_name}?",
+          "required_fields": ["procedure_name", "diagnosis_name"],
+          "optional_fields": [],
+          "context": "Understanding therapeutic procedures"
+        },
+        {
+          "id": "multi_comprehensive",
+          "template": "I have {diagnosis_name}, abnormal {lab_name}, and I'm taking {medication_name}. How are these all related?",
+          "required_fields": ["diagnosis_name", "lab_name", "medication_name"],
+          "optional_fields": [],
+          "context": "Comprehensive understanding"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "created_for": "Perplexity API integration",
+    "description": "Template questions for patient-specific medical information queries",
+    "usage_notes": [
+      "Replace fields in {curly_braces} with patient-specific data",
+      "required_fields must be populated for the question to make sense",
+      "optional_fields enhance context but aren't mandatory",
+      "Use diagnosis_name with ICD 'long_title' field for clarity",
+      "Use medication_name from prescriptions 'drug' field",
+      "For lab results, abnormal_flag should be one of: HIGH, LOW, abnormal, POSITIVE, NEGATIVE",
+      "Route abbreviations: PO (by mouth), IV (intravenous), SC (subcutaneous), IH (inhaled), IM (intramuscular), TD (transdermal)"
+    ],
+    "priority_recommendations": [
+      "Focus on discharge medications for post-discharge questions",
+      "Prioritize abnormal/flagged lab results",
+      "Use primary diagnoses (seq_num = 1) for main condition questions",
+      "Combine multiple data points for most contextually relevant questions"
+    ]
+  }
+}

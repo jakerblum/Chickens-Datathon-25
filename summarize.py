@@ -1,17 +1,18 @@
 import argparse
 import json
+import os
 from perplexity import Perplexity
 
-# export PERPLEXITY_API_KEY=perplexity-api-key
+os.environ["PERPLEXITY_API_KEY"] = 
 
 def summarize_data(data, detail_level):
     client = Perplexity()
-    with open("env/perplexity_question_templates.json", "r") as f:
+    with open("utils/perplexity_question_templates.json", "r") as f:
         question_templates = json.load(f)
 
     system_prompt = f"""
     You are a professional patient advocate that is tasked with interpreting patient chart data from a provider's perspective and translating it into an easy-to-digest format for a patient.
-    You are given a JSON object containing the patient's data. You are to summarize the data in a way that is easy to understand for a patient.
+    You are given a JSON object containing the patient's data. You are to summarize the data in a way that is easy to understand for a patient. Only provide information that you can verify from your search results, and clearly state if certain details are not available. 
 
     Please return your response in a JSON object with the following keys:
     - visit_summary: A summary and interpretation of the patient's visit. The visit is included in input data as a timeline of events under the 'timeline' key.
@@ -33,7 +34,8 @@ def summarize_data(data, detail_level):
             {"role": "system", "content": system_prompt},
             {"role": "system", "content": detail_prompt},
             {"role": "user", "content": data_prompt}
-        ]
+        ],
+        search_domain_filter = ["my.clevelandclinic.org", "mayoclinic.org", "medlineplus.gov", "webmd.com", "pubmed.ncbi.nlm.nih.gov", "nih.gov", "drugs.com"]
     )
     return response.choices[0].message.content
 

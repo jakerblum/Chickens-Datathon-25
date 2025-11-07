@@ -1,0 +1,12 @@
+{
+  "medications": [
+    {
+      "full_name": "Emtricitabine-Tenofovir (Truvada)",
+      "generic_name": "Emtricitabine-Tenofovir",
+      "brand_names": ["Truvada", "Descovy"],
+      "aliases": ["emtricitabine/tenofovir", "FTC-TDF"],
+      "physical_description": "Light blue oval tablet with 'C209' imprint on one side",
+      "image_path": "Medications/Drug_Images/Emtricitabine-Tenofovir (Truvada).jpeg"
+    }
+  ]
+}

@@ -7,6 +7,63 @@
       "aliases": ["emtricitabine/tenofovir", "FTC-TDF"],
       "physical_description": "Light blue oval tablet with 'C209' imprint on one side",
       "image_path": "Medications/Drug_Images/Emtricitabine-Tenofovir (Truvada).jpeg"
+    },
+
+    {
+      "full_name": "Acetaminophen",
+      "generic_name": "Acetaminophen",
+      "brand_names": ["Tylenol"],
+      "aliases": ["Acetaminophen"],
+      "physical_description": "White, round tablet with 'TYLENOL' imprint on one side",
+      "image_path": "Medications/Drug_Images/Acetaminophen.jpg"
+    },
+    {
+      "full_name": "Aspirin",
+      "generic_name": "Aspirin",
+      "brand_names": ["Aspirin"],
+      "aliases": ["Aspirin"],
+      "physical_description": "White, round tablet with 'ASPIRIN' and 'L' imprint on one side",
+      "image_path": "Medications/Drug_Images/Aspirin.jpg"
+    },
+    {
+      "full_name": "Atorvastatin",
+      "generic_name": "Atorvastatin",
+      "brand_names": ["Lipitor"],
+      "aliases": ["Atorvastatin"],
+      "physical_description": "White, oval tablet with 'ATO' imprint on one side",
+      "image_path": "Medications/Drug_Images/Atorvastatin.jpg"
+    },
+    {
+      "full_name": "Docusate Sodium",
+      "generic_name": "Docusate Sodium",
+      "brand_names": ["Colace"],
+      "aliases": ["Docusate Sodium"],
+      "physical_description": "Red oval-shaped pill with 'SCO' imprint on one side",
+      "image_path": "Medications/Drug_Images/Docusate Sodium.jpg"
+    },
+    {
+      "full_name": "Furosemide",
+      "generic_name": "Furosemide",
+      "brand_names": ["Lasix"],
+      "aliases": ["Furosemide"],
+      "physical_description": "White, round tablet with '17' imprint on one side",
+      "image_path": "Medications/Drug_Images/Furosemide.jpg"
+    },
+    {
+      "full_name": "Omeprazole",
+      "generic_name": "Omeprazole",
+      "brand_names": ["Prilosec"],
+      "aliases": ["Omeprazole"],
+      "physical_description": "White, oval tablet with 'XI 20' imprint on one side",
+      "image_path": "Medications/Drug_Images/Omeprazole.jpg"
+    },
+    {
+      "full_name": "Potassium Chloride",
+      "generic_name": "Potassium Chloride",
+      "brand_names": ["K-Cl"],
+      "aliases": ["Potassium Chloride"],
+      "physical_description": "White, oval tablet with '112' imprint on one side",
+      "image_path": "Medications/Drug_Images/Potassium Chloride.jpg"
     }
   ]
 }

@@ -305,7 +305,38 @@ def generate_medication_faqs(medications, generator):
 
     return medication_faqs
 
+def load_filtered_labs_list():
+    """Load the list of labs to include from JSON file"""
+    try:
+        with open("filtered_labs_list.json", "r") as f:
+            labs_config = json.load(f)
+            return set(labs_config.get('included_labs', []))
+    except FileNotFoundError:
+        print("Warning: filtered_labs_list.json not found. Including all labs.")
+        return None
+
+def filter_lab_results(lab_results, included_labs):
+    """Filter lab results to only include specified tests"""
+    if included_labs is None:
+        return lab_results
+
+    filtered = []
+    for lab in lab_results:
+        test_name = lab.get('test_name', '')
+        if test_name in included_labs:
+            filtered.append(lab)
+
+    print(f"Filtered labs: {len(filtered)}/{len(lab_results)} tests (keeping only specified labs)")
+    return filtered
+
 def summarize_data(data, detail_level):
+    # Load filtered labs list
+    included_labs = load_filtered_labs_list()
+
+    # Filter lab results before processing
+    if included_labs:
+        data['lab_results'] = filter_lab_results(data.get('lab_results', []), included_labs)
+
     # Enrich patient data with visual medication information
     data = enrich_patient_data_with_visuals(data)
 
@@ -1418,7 +1449,7 @@ if __name__ == "__main__":
     # Determine output path
     if args.output is None:
         hadm_id = data.get('hadm_id', 'unknown')
-        output_path = f"patient_summary_{hadm_id}.html"
+        output_path = f"patient_summary_{hadm_id}_filtered.html"
     else:
         output_path = args.output
 

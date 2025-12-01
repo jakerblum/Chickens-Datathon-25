@@ -1,7 +1,8 @@
 # Chickens-Datathon-25
-This respository contains our team's project and submission for the 2025 MD+ Datathon. Outcome: Semi-finalists
-Link to our [abstract](https://docs.google.com/document/d/1URPYZX4IWlKJ2xmA8MjLvPBeo00U1dB2T50PbykcCdk/edit?usp=sharing)
-Link to our [full writeup]([url](https://docs.google.com/document/d/1f65nJQkZGuhEQZzInZV4yo3OPvg3Wwg2jZQemRMNWf8/edit?usp=sharing))
+This respository contains our team's project and submission for the 2025 MD+ Datathon.  
+Outcome: Semi-finalists  
+Link to our [abstract](https://docs.google.com/document/d/1URPYZX4IWlKJ2xmA8MjLvPBeo00U1dB2T50PbykcCdk/edit?usp=sharing)  
+Link to our [full writeup]([url](https://docs.google.com/document/d/1f65nJQkZGuhEQZzInZV4yo3OPvg3Wwg2jZQemRMNWf8/edit?usp=sharing))  
 
 **Team:** Jake Blum, Rohin Manohar, and Conor Moore
 
@@ -720,15 +721,6 @@ export PERPLEXITY_API_KEY="your-key-here"
 ```bash
 pip install pandas plotly perplexity-python
 ```
-
----
-
-## Contributors
-
-**Team Chickens-Datathon-25**
-- Jake
-- Rohin
-- Conor
 
 ---
 

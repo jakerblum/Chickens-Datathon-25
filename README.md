@@ -1,5 +1,5 @@
 # Chickens-Datathon-25
-**Team:** Jake, Rohin, and Conor
+**Team:** Jake Blum, Rohin Manohar, and Conor Moore
 
 ## Overview
 
